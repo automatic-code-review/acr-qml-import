@@ -78,7 +78,7 @@ def verify(path, regex_order):
     lines_with_import = remove_duplicate_imports(lines_with_import)
     lines_with_import_ordered = adjust_order(lines_with_import, regex_order)
 
-    linhas_fix = lines_with_import_ordered
+    linhas_fix = lines_with_import_ordered.copy()
     linhas_fix.extend(lines_without_import)
 
     if check_order_changed(linhas_fix, lines):
