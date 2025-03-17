@@ -94,7 +94,7 @@ def ordered_to_string(ordered):
         + "".join(
             [
                 order.replace(">", "&gt;").replace("<", "&lt;").replace("\n", "<br>")
-                for order in ordered[1:-1]
+                for order in ordered[:]
             ]
         )
         + "</pre>"
