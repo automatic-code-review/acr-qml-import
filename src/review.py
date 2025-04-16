@@ -70,7 +70,7 @@ def verify(path, regex_order):
 
     for line in lines:
 
-        if line.startswith("import "):
+        if line.startswith("import ") or line.startswith("pragma "):
             lines_with_import.append(line)
         else:
             lines_without_import.append(line)
